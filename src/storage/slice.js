@@ -12,7 +12,6 @@ const sliceReducer = createSlice ({
         GetEmail: (state, action) => {
             state.email = action.payload;
         }
-
     }
 })
 
