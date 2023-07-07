@@ -24,7 +24,6 @@ export default function Header() {
         <Styles.ConfigEmailButton> 
           <img src={User} alt="user" /> 
           <Styles.Email>
-          
             {email}
           </Styles.Email>
           <Styles.ButtonLogout>

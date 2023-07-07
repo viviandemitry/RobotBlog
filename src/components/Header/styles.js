@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    position: relative;
+    /* position: relative; */
     display: flex;
     width: 100%;
     background: #000D3F;
@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const ContainerLogo = styled.div`
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     padding-top: 3.06rem;
     padding-left: 5.69rem;
 
@@ -21,7 +21,7 @@ export const ContainerLogo = styled.div`
 `;
 
 export const ConfigEmailButton = styled.div`
-    position: absolute;
+    /* position: absolute; */
     float: right;
     display: flex;
     flex-direction: row;
@@ -39,7 +39,7 @@ export const ConfigEmailButton = styled.div`
 
 
 export const Email = styled.p`
-    position: relative;
+    /* position: relative; */
     color: white;
     align-items: center;
     color: #FFF;
@@ -54,7 +54,7 @@ export const Email = styled.p`
 `;
 
 export const ButtonLogout = styled.button`
-    position: relative;
+    /* position: relative; */
     background: rgba(17, 45, 188, 1), rgba(34, 56, 164, 1);
     align-items: center;
     width: 4.625rem;
