@@ -1,10 +1,17 @@
 import styled from "styled-components";
 
 export const ContainerMain = styled.div`
+    width: 100%;
+    min-height: 100vh;
+    ` 
+
+export const ContentMain = styled.div`
     display: flex;
     width: 100%;
+    /* min-height: 100vh; */
     background: #000D3F;
-`
+    /* border: solid green; */
+    `
 
 export const ContainerTexts = styled.div`
     display:table-row;
@@ -70,6 +77,7 @@ export const ButtonInitial = styled.button`
 
     border-radius: 0.5625rem;
     background: linear-gradient(180deg, #112DBC 0%, rgba(34, 56, 164, 0.00) 100%);
+    box-shadow: 3px 3px 50px 0 #9E89F6A6;
     color: #FFF;
     font-family: Jost;
     font-size: 1.125rem;
@@ -83,7 +91,8 @@ export const ButtonInitial = styled.button`
 export const ContainerImg = styled.div`
         /* display: flex; */
         /* align-items:bottom; */
-        margin-top: 14.44rem;
+        /* margin-top: 14.44rem; */
+        margin-top: 17.6rem;
         margin-left: 34.62rem;
         /* border: solid red; */
      
