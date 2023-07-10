@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Jost:wght@400;500;700&family=Roboto:wght@100;300;400&display=swap');
+
+* {
+      background-color: #000D3F;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+      
+}
+
+
 .App {
   text-align: center;
 }
