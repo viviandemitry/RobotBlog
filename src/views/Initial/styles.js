@@ -76,6 +76,7 @@ export const ButtonInitial = styled.button`
     flex-shrink: 0;
 
     border-radius: 0.5625rem;
+    border: none;
     background: linear-gradient(180deg, #112DBC 0%, rgba(34, 56, 164, 0.00) 100%);
     box-shadow: 3px 3px 50px 0 #9E89F6A6;
     color: #FFF;
