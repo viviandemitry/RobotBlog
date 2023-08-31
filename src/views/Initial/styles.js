@@ -49,13 +49,13 @@ export const TextTitle = styled.h1`
 export const TextP = styled.p`
     margin-top: 0;
     margin-left: 5.56rem;
-    width: 29.0625rem;
+    width: 30rem;
     flex-direction: column;
 
     color: #FFF;
     text-align: justify;
     font-family: Jost;
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 151.5%;
@@ -81,7 +81,7 @@ export const ButtonInitial = styled.button`
     box-shadow: 3px 3px 50px 0 #9E89F6A6;
     color: #FFF;
     font-family: Jost;
-    font-size: 1.125rem;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -126,14 +126,14 @@ export const TextPRight = styled.p`
     display: flex;
     margin-top: 0.9rem;
     margin-right: 4.12rem; 
-    width: 26.25rem;
+    width: 27rem;
     flex-direction: column;
     flex-shrink: 0;
     
     color: #FFF;
     text-align: justify;
     font-family: Jost;
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 151.5%;
