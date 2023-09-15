@@ -55,11 +55,11 @@ export const InputContent = styled.input`
     margin-bottom:3rem;
 
 `
-export const InputLabel = styled.label`
+export const AlertMessage = styled.p`
     display:flex;
     justify-content: center;
     flex-direction: column;
-    
+    margin-top: -2rem;
 
     color: #FFF;
     text-align: center;
@@ -71,7 +71,23 @@ export const InputLabel = styled.label`
     letter-spacing: 1.32px;
     text-transform: capitalize;
     background: none;
+`
 
+export const InputLabel = styled.label`
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    color: #FFF;
+    text-align: center;
+    font-family: Jost;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.32px;
+    text-transform: capitalize;
+    background: none;
 `
 export const RegisterButton = styled.button`
     /* border-radius: 9px;

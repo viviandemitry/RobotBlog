@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { GetEmail } from '../../storage/slice'
 
 
-export default function Register() {
-
+export default function Register(props) {
+console.log(props)
 //   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [name, setName] = useState('');
@@ -37,6 +37,7 @@ export default function Register() {
     const response = await fetch('http://localhost:3000/api/cadastrar', {method: 'POST', headers: {'Content-Type': 'application/json',},
     body: JSON.stringify(data),})
     console.log(response)
+    props.setIsRegister(false)
   }
 
   return (

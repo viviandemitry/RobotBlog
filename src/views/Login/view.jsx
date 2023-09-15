@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Header from '../../components/Header'
 import Register from '../../components/Register';
 import * as Styles from './styles';
@@ -15,10 +15,10 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isRegister, setIsRegister] = useState(false);
+  const [message, setMessage] = useState('');
 
   function handleEmail(e){
-    setEmail(e.target.value);
-    
+    setEmail(e.target.value); 
   }
 
   function handlePassword(e){
@@ -30,19 +30,37 @@ export default function Login() {
   }
 
   function handleClick(){
-    navigate("/home")
-    dispatch(GetEmail(email))
+    const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    if (!(email.match(regexEmail)) || !(password.length >= 8)){
+     setMessage('Invalid E-mail or Password') 
+    } else {
+     setMessage('')
+     navigate("/home")
+     dispatch(GetEmail(email))
+    }
   }
  
+  // useEffect(() => {
+  //  const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  //  if (!(email.match(regexEmail)) || !(password.length >= 8)){
+  //   setMessage('Invalid E-mail or Password') 
+  //  } else {
+  //   setMessage('')
+  //  }
+  // }, [email, password]);
+
   return (
     <Styles.ContainerMain>
       <Header />
       <Styles.ContentMain>
-        { isRegister ? <Register /> : 
+        { isRegister ? <Register setIsRegister={setIsRegister}/> : 
         <Styles.LeftContent>
           <Styles.FormTitle>
             Login
           </Styles.FormTitle>
+          <Styles.AlertMessage>
+            {message}
+          </Styles.AlertMessage>
           <Styles.FormContent>
           <Styles.InputLabel>
             EMAIL
