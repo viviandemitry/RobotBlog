@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerMain = styled.div`
     width: 100%;
     min-height: 100vh;
-    ` 
+` 
 
 export const ContentMain = styled.div`
     display: flex;
@@ -33,8 +33,7 @@ export const FormTitle = styled.h2`
     line-height: normal;
     letter-spacing: -3.617px;
     text-transform: uppercase;
-    background: none;
-    
+    background: none;  
 `
 export const FormContent = styled.form`
     background: none;
@@ -51,28 +50,9 @@ export const InputContent = styled.input`
     height: 2.25rem;
     flex-shrink: 0;
 
-    margin-top:2rem;
-    margin-bottom:3rem;
-
+    margin-top:1rem;
+    margin-bottom:1.2rem;
 `
-export const AlertMessage = styled.p`
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: -2rem;
-
-    color: #FFF;
-    text-align: center;
-    font-family: Jost;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1.32px;
-    text-transform: capitalize;
-    background: none;
-`
-
 export const InputLabel = styled.label`
     display:flex;
     justify-content: center;
@@ -88,31 +68,6 @@ export const InputLabel = styled.label`
     letter-spacing: 1.32px;
     text-transform: capitalize;
     background: none;
-`
-export const RegisterButton = styled.button`
-    /* border-radius: 9px;
-    border-radius: 0.5625rem; */
-    border: none;
-    background: none; 
-    box-shadow: none;
-    margin-top: -1rem;
-    
-    display: flex;
-    width: 17.625rem;
-    height: 3.625rem;
-    padding: 0.9375rem 3.375rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    flex-shrink: 0;
-
-    color: #FFF;
-    font-family: Jost;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.0225rem;
 `
 
 export const SubmitButton = styled.button`
@@ -139,7 +94,6 @@ export const SubmitButton = styled.button`
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.0225rem;
-
 `
 
 export const RightContent = styled.div`

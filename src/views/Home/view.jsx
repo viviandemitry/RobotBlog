@@ -1,10 +1,14 @@
 import React from 'react'
 import Header from '../../components/Header'
+import * as Styles from './styles';
 
 export default function Home() {
   return (
-    <div>
+    <Styles.ContainerMain>
     <Header />
-    </div>
+    <Styles.NewsContainer>
+      
+    </Styles.NewsContainer>
+    </Styles.ContainerMain>
   )
 }
