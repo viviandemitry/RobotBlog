@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Header from '../../components/Header'
 import * as Styles from './styles';
+import videoTech from '../../assets/videos/video-tech.mp4'
 
 export default function Home() {
 
@@ -17,9 +18,16 @@ export default function Home() {
   },[])
 
   return (
+    // <Styles.Video>
+    // <video src={videoTech} autoPlay loop muted />
     <Styles.ContainerMain>
     <Header />
-    
+    <Styles.Title>
+      ROBOT AI
+    </Styles.Title>
+    <Styles.Text>
+      Find out the latest news about Technology
+    </Styles.Text>
     <Styles.NewsContainer>
       {
         data.map((news) => (
@@ -33,5 +41,6 @@ export default function Home() {
       }
     </Styles.NewsContainer>
     </Styles.ContainerMain>
+  //  </Styles.Video>
   )
 }
