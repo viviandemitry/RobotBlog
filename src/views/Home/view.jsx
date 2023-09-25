@@ -18,9 +18,10 @@ export default function Home() {
   },[])
 
   return (
-    // <Styles.Video>
-    // <video src={videoTech} autoPlay loop muted />
+ 
     <Styles.ContainerMain>
+    {/* <Styles.Video> */}
+     <video src={videoTech} autoPlay loop muted />
     <Header />
     <Styles.Title>
       ROBOT AI
@@ -40,7 +41,8 @@ export default function Home() {
         ))
       }
     </Styles.NewsContainer>
+    {/* </Styles.Video> */}
     </Styles.ContainerMain>
-  //  </Styles.Video>
+  
   )
 }

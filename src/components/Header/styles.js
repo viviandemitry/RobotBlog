@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import px2vw from "../../utils/px2vw";
+import { device } from "../../utils/brakePoints";
 
 export const Container = styled.div`
     display: flex;
@@ -9,12 +11,13 @@ export const Container = styled.div`
 
 export const ContainerLogo = styled.div`
     display: flex;
-    padding-top: 3.06rem;
-    padding-left: 5.69rem;
+    padding-top: ${px2vw(10)};
+    padding-bottom: ${px2vw(10)};
+    padding-left: ${px2vw(91)};
 
     img{
-        width: 4.62rem;
-        height: 5.25rem; 
+        width: ${px2vw(60)};
+        height: ${px2vw(70)}; 
     }
 `;
 
@@ -22,15 +25,15 @@ export const ConfigEmailButton = styled.div`
     float: right;
     display: flex;
     flex-direction: row;
-    column-gap: 4.5rem;
-    margin-top: 4.13rem;
-    margin-left: 96.4rem;
+    column-gap: ${px2vw(72)};
+    margin-top: ${px2vw(10)};
+    margin-left: ${px2vw(900)};
     justify-content: center;
     align-items: center;
 
     img{
-        width: 2rem;
-        height: 2rem; 
+        width: ${px2vw(22)};
+        height: ${px2vw(22)}; 
     }
 `;
 
@@ -41,7 +44,7 @@ export const Email = styled.p`
     color: #FFF;
     text-align: center;
     font-family: Jost;
-    font-size: 16px;
+    font-size: ${px2vw(16)};
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -50,10 +53,10 @@ export const Email = styled.p`
 `;
 
 export const ButtonLogout = styled.button`
-    width: 4.625rem;
-    height: 1.57rem;
-    border-radius: 9px;
-    border-radius: 0.5625rem;
+    width: ${px2vw(90)};
+    height: ${px2vw(30)};
+    border-radius: ${px2vw(9)};
+    border-radius: ${px2vw(9)};
     border: none;
     background: linear-gradient(180deg, #112DBC 0%, rgba(34, 56, 164, 0.00) 100%);
     box-shadow: 3px 3px 50px 0 #9E89F6A6;
@@ -61,10 +64,10 @@ export const ButtonLogout = styled.button`
     color: #FFF;
     text-align: center;
     font-family: Jost;
-    font-size: 1rem;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: -0.03rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
 `;
