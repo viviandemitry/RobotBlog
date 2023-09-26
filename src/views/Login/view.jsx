@@ -29,14 +29,27 @@ export default function Login() {
     setIsRegister(true);
   }
 
-  function handleClick(){
-    const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-    if (!(email.match(regexEmail)) || !(password.length >= 8)){
+async function handleClick(e){
+  e.preventDefault()
+  const data = {
+    email,
+    password
+}
+  const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  if (!(email.match(regexEmail)) || !(password.length >= 8)){
      setMessage('Invalid E-mail or Password') 
     } else {
-     setMessage('')
-     navigate("/home")
-     dispatch(GetEmail(email))
+      const response = await fetch('http://localhost:3000/api/login', {method: 'POST', headers: {'Content-Type': 'application/json',},
+      body: JSON.stringify(data),})
+      const dataApi = await response.json()
+      console.log(dataApi, response)
+      if (dataApi.message){
+        setMessage('Invalid User')
+        return
+      }
+      setMessage('')
+      navigate("/home")
+      dispatch(GetEmail(email))
     }
   }
  

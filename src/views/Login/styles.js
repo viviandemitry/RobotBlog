@@ -1,6 +1,10 @@
 import styled from "styled-components";
+import px2vw from "../../utils/px2vw";
+import { device } from "../../utils/brakePoints";
+
 
 export const ContainerMain = styled.div`
+    background-color: #000D3F;
     width: 100%;
     min-height: 100vh;
     ` 
