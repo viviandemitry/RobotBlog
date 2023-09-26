@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import px2vw from "../../utils/px2vw";
+import { device } from "../../utils/brakePoints";
 
 export const ContainerMain = styled.div`
     background-color: #000D3F;
@@ -12,6 +14,10 @@ export const ContentMain = styled.div`
     /* min-height: 100vh; */
     background: #000D3F;
     /* border: solid green; */
+
+    @media ${device.mobileM}{
+        display:table-row;
+    }
     `
 
 export const ContainerTexts = styled.div`
@@ -19,74 +25,105 @@ export const ContainerTexts = styled.div`
 `;
 
 export const Text = styled.h3`
-    margin-top: 26.5rem;
-    margin-left: 5.62rem;
+    margin-top: ${px2vw(30)};
+    margin-left: ${px2vw(92)};
 
     color: #FFF;
     text-align: justify;
     font-family: Jost;
-    font-size:  1.375rem;
+    font-size:  ${px2vw(18)};
     font-style: normal;
     font-weight: 400;
     line-height: 151.5%;
     letter-spacing: 0.00875rem;
     text-transform: capitalize;
+
+    @media ${device.mobileM}{
+        margin-top: ${px2vw(300)};
+        margin-left: ${px2vw(300)};
+        
+        font-size:  ${px2vw(40)};
+    }
 `;
 
 export const TextTitle = styled.h1`
-    margin-top: 1.12rem;
-    margin-left: 5.56rem;
+    margin-top: ${px2vw(10)};
+    margin-left: ${px2vw(89)};
 
     color: #FFF;
     font-family: Jost;
-    font-size: 5.02375rem;
+    font-size: ${px2vw(40)};
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: -0.22606rem;
+    letter-spacing: ${px2vw(-1)};
     text-transform: uppercase;
-    `
+
+    @media ${device.mobileM}{
+        margin-top: ${px2vw(50)};
+        margin-left: ${px2vw(300)};
+        
+        font-size:  ${px2vw(70)};
+    }
+`
 
 export const TextP = styled.p`
-    margin-top: 0;
-    margin-left: 5.56rem;
-    width: 30rem;
+    margin-top: ${px2vw(-20)};
+    margin-left: ${px2vw(92)};
+    width: ${px2vw(350)};
     flex-direction: column;
 
     color: #FFF;
     text-align: justify;
     font-family: Jost;
-    font-size: 1.2rem;
+    font-size: ${px2vw(13)};
     font-style: normal;
     font-weight: 400;
     line-height: 151.5%;
     letter-spacing: 0.00875rem;
     text-transform: capitalize;
+
+    @media ${device.mobileM}{
+        margin-top: ${px2vw(50)};
+        margin-left: ${px2vw(300)};
+        width: ${px2vw(550)};
+
+        font-size:  ${px2vw(22)};
+    }
 `
 
 export const ButtonInitial = styled.button`
     display: flex;
-    margin-top: 5.88rem;
-    margin-left: 5.56rem;
-    width: 17.625rem;
-    height: 3.625rem;
-    padding: 0.9375rem 3.375rem;
+    margin-top: ${px2vw(35)};
+    margin-left: ${px2vw(92)};
+    width: ${px2vw(200)};
+    height: ${px2vw(50)};
+    padding: ${px2vw(10)} ${px2vw(10)};
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: ${px2vw(10)};
     flex-shrink: 0;
 
-    border-radius: 0.5625rem;
+    border-radius: ${px2vw(9)};
     border: none;
     background: linear-gradient(180deg, #112DBC 0%, rgba(34, 56, 164, 0.00) 100%);
     box-shadow: 3px 3px 50px 0 #9E89F6A6;
     color: #FFF;
     font-family: Jost;
-    font-size: 1.3rem;
+    font-size: ${px2vw(15)};
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: 0.0225rem;
+    letter-spacing: ${px2vw(0.36)};
+
+    @media ${device.mobileM}{
+        margin-top: ${px2vw(50)};
+        margin-left: ${px2vw(300)};
+        width: ${px2vw(300)};
+        height: ${px2vw(100)};
+
+        font-size:  ${px2vw(22)};
+    }
 
 `
 
@@ -94,14 +131,24 @@ export const ContainerImg = styled.div`
         /* display: flex; */
         /* align-items:bottom; */
         /* margin-top: 14.44rem; */
-        margin-top: 17.6rem;
-        margin-left: 34.62rem;
+        margin-top: ${px2vw(45)};
+        margin-left: ${px2vw(10)};
         /* border: solid red; */
      
      img{
-        width: 51.45rem;
-        height: 56rem;
+        width: ${px2vw(500)};
+        height: ${px2vw(545)};
         /* flex-shrink: 0;  */
+    }
+
+    @media ${device.mobileM}{
+        margin-top: ${px2vw(50)};
+        margin-left: ${px2vw(700)};
+     
+        img{
+        width: ${px2vw(800)};
+        height: ${px2vw(900)};
+        }
     }
 
 `
@@ -109,35 +156,48 @@ export const TextRight = styled.div`
      display:table-row;
 `
 export const TextTitleRight = styled.h2`
-    margin-top: 42.41rem;
-    margin-right: 4.12rem;    
+    margin-top: ${px2vw(250)};
+    margin-right: ${px2vw(150)};    
 
     color: #FFF;
     text-align: center;
     font-family: Jost;
-    font-size: 2.83094rem;
+    font-size: ${px2vw(40)};
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: -0.12738rem;
+    letter-spacing: ${px2vw(-1.5)};
     text-transform: uppercase;
+
+    @media ${device.mobileM}{
+        margin-top: ${px2vw(-450)};
+        margin-right: ${px2vw(-250)};
+        font-size: ${px2vw(60)}; 
+    }
 `
 
 export const TextPRight = styled.p`
     display: flex;
-    margin-top: 0.9rem;
-    margin-right: 4.12rem; 
-    width: 27rem;
+    margin-top: ${px2vw(10)};
+    margin-right: ${px2vw(-120)}; 
+    width: ${px2vw(350)};
     flex-direction: column;
     flex-shrink: 0;
     
     color: #FFF;
     text-align: justify;
     font-family: Jost;
-    font-size: 1.2rem;
+    font-size: ${px2vw(13)};
     font-style: normal;
     font-weight: 400;
     line-height: 151.5%;
     letter-spacing: 0.00875rem;
     text-transform: capitalize;
+
+    @media ${device.mobileM}{
+        margin-top: ${px2vw(-10)};
+        margin-left: ${px2vw(130)};
+        width: ${px2vw(550)};
+        font-size: ${px2vw(22)}; 
+    }
 `
