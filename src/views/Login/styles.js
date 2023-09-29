@@ -7,37 +7,52 @@ export const ContainerMain = styled.div`
     background-color: #000D3F;
     width: 100%;
     min-height: 100vh;
-    ` 
+` 
 
 export const ContentMain = styled.div`
     display: flex;
     width: 100%;
-    /* min-height: 100vh; */
     background: #000D3F;
-    /* border: solid green; */
-    `
-export const LeftContent = styled.div`
-    width: 31.4375rem;
-    height: 46.375rem;
-    flex-shrink: 0;
-    margin-top:16rem;
-    margin-left:9rem;
-    border-radius: 1.9rem;
 
-    border-radius: 1.875rem;
+    @media ${device.mobileM}{
+        display: table-row;
+    }
+`
+
+export const LeftContent = styled.div`
+    width: ${px2vw(400)};
+    height: ${px2vw(550)};
+    flex-shrink: 0;
+    margin-top: ${px2vw(20)};
+    margin-left: ${px2vw(244)};
+    border-radius: ${px2vw(30.4)};
+
+    border-radius: ${px2vw(30)};
     background: rgba(20, 57, 104, 0.44);
+
+    @media ${device.mobileM}{
+        width: ${px2vw(900)};
+        height: ${px2vw(1500)};
+        margin-top: ${px2vw(100)};
+        margin-left: ${px2vw(200)};
+        padding-top: 10px;
+    }
 `
 export const FormTitle = styled.h2`
     color: #FFF;
     text-align: center;
     font-family: Jost;
-    font-size: 80.38px;
+    font-size: ${px2vw(30)};
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: -3.617px;
+    letter-spacing: ${px2vw(3)};
     text-transform: uppercase;
     background: none;
+
+    @media ${device.mobileM}{
+        font-size: ${px2vw(100)};
+    }
     
 `
 export const FormContent = styled.form`
@@ -48,33 +63,46 @@ export const FormContent = styled.form`
     flex-direction: column;
 `
 export const InputContent = styled.input`
-    border-radius: 20px;
+    border-radius: ${px2vw(20)};
+    width: ${px2vw(300)};
+    height: ${px2vw(36)};
+    flex-shrink: 0;
+    margin-top: ${px2vw(30)};
+    margin-bottom: ${px2vw(48)};
+    text-align: center;
+
     background: #FFF;
     box-shadow: 2px 1px 64px 0px rgba(144, 119, 214, 0.52);
-    width: 19.5625rem;
-    height: 2.25rem;
-    flex-shrink: 0;
+    font-size: ${px2vw(18)};
 
-    margin-top:2rem;
-    margin-bottom:3rem;
+    @media ${device.mobileM}{
+        width: ${px2vw(600)};
+        height: ${px2vw(70)};
+
+        font-size: ${px2vw(30)};   
+    }
 
 `
 export const AlertMessage = styled.p`
     display:flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: -2rem;
+    margin-top: ${px2vw(-25)};
 
     color: #FFF;
     text-align: center;
     font-family: Jost;
-    font-size: 22px;
+    font-size: ${px2vw(22)};
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 1.32px;
+    letter-spacing: ${px2vw(1.3)};
     text-transform: capitalize;
     background: none;
+
+    @media ${device.mobileM}{
+        font-size: ${px2vw(40)};
+    }
 `
 
 export const InputLabel = styled.label`
@@ -85,74 +113,94 @@ export const InputLabel = styled.label`
     color: #FFF;
     text-align: center;
     font-family: Jost;
-    font-size: 22px;
+    font-size: ${px2vw(20)};
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 1.32px;
+    letter-spacing: ${px2vw(1.3)};
     text-transform: capitalize;
     background: none;
+
+    @media ${device.mobileM}{
+        font-size: ${px2vw(40)};
+        margin-top: ${px2vw(60)};
+    }
 `
 export const RegisterButton = styled.button`
-    /* border-radius: 9px;
-    border-radius: 0.5625rem; */
     border: none;
     background: none; 
     box-shadow: none;
-    margin-top: -1rem;
+    margin-top: ${px2vw(-1)};
+    text-decoration: underline;
     
     display: flex;
-    width: 17.625rem;
-    height: 3.625rem;
-    padding: 0.9375rem 3.375rem;
+    width: ${px2vw(282)};
+    height: ${px2vw(30)};
+    padding: ${px2vw(10)} ${px2vw(54)};
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: ${px2vw(10)};
     flex-shrink: 0;
 
     color: #FFF;
     font-family: Jost;
-    font-size: 1.125rem;
+    font-size: ${px2vw(18)};
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: 0.0225rem;
+    letter-spacing: ${px2vw(0.36)};
+
+    @media ${device.mobileM}{
+        font-size: ${px2vw(40)};
+        margin-top: ${px2vw(100)};
+    }
 `
 
 export const SubmitButton = styled.button`
-    border-radius: 9px;
-    border-radius: 0.5625rem;
+    border-radius: ${px2vw(9)};
     border: none;
     background: linear-gradient(180deg, #112DBC 0%, rgba(34, 56, 164, 0.00) 100%);
     box-shadow: 3px 3px 50px 0 #9E89F6A6;
-    margin-top:2.2rem;
+    margin-top: ${px2vw(35)};
 
     display: flex;
-    width: 17.625rem;
-    height: 3.625rem;
-    padding: 0.9375rem 3.375rem;
+    width: ${px2vw(282)};
+    height: ${px2vw(58)};
+    padding: ${px2vw(15)} ${px2vw(54)};
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
+    gap: ${px2vw(10)};
     flex-shrink: 0;
 
     color: #FFF;
     font-family: Jost;
-    font-size: 1.125rem;
+    font-size: ${px2vw(18)};
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: 0.0225rem;
+    letter-spacing: ${px2vw(0.4)};
+
+    @media ${device.mobileM}{
+        font-size: ${px2vw(40)};
+        margin-top: ${px2vw(120)};
+        width: ${px2vw(400)};
+        height: ${px2vw(90)};
+    }
 
 `
 
 export const RightContent = styled.div`
-    margin-top:17.6rem;
-    margin-left:49rem;
+    margin-top:${px2vw(30)};
+    margin-left:${px2vw(30)};
 
     img{
-        width: 51.45044rem;
-        height: 56rem;
+        width: ${px2vw(600)};
+        height: ${px2vw(550)};
         flex-shrink: 0;
+    }
+
+    @media ${device.mobileM}{
+      margin-top: -60px;
+      margin-left:${px2vw(800)};
     }
 `
