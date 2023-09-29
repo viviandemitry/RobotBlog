@@ -6,7 +6,10 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     background: #000D3F;
- 
+
+    @media ${device.mobileM}{
+        height: ${px2vw(150)};
+    }
 `;
 
 export const ContainerLogo = styled.div`
@@ -18,6 +21,15 @@ export const ContainerLogo = styled.div`
     img{
         width: ${px2vw(60)};
         height: ${px2vw(70)}; 
+    }
+    
+    @media ${device.mobileM}{
+        margin-top:2px;  
+        img{
+          
+        width: ${px2vw(120)};
+        height: ${px2vw(120)}; 
+     }
     }
 `;
 
@@ -35,8 +47,16 @@ export const ConfigEmailButton = styled.div`
         width: ${px2vw(22)};
         height: ${px2vw(22)}; 
     }
-`;
 
+    @media ${device.mobileM}{
+        margin-left: ${px2vw(500)};
+
+        img{
+        width: ${px2vw(40)};
+        height: ${px2vw(40)}; 
+     }
+    }
+`;
 
 export const Email = styled.p`
     color: white;
@@ -64,10 +84,17 @@ export const ButtonLogout = styled.button`
     color: #FFF;
     text-align: center;
     font-family: Jost;
-    font-size: 16px;
+    font-size: ${px2vw(16)};
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    @media ${device.mobileM}{
+        /* margin-left: ${px2vw(500)}; */
+        width: ${px2vw(200)};
+        height: ${px2vw(40)}; 
+        font-size: ${px2vw(40)};
+    }
 `;

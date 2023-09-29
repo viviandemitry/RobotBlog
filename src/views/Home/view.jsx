@@ -2,15 +2,26 @@ import React, {useEffect, useState} from 'react'
 import Header from '../../components/Header'
 import * as Styles from './styles';
 import videoTech from '../../assets/videos/video-tech.mp4'
+import mockApi from '../../utils/mockApi';
 
 export default function Home() {
 
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   async function getInfo(){
+    try{
+    setLoading(true)
     const response = await fetch('http://localhost:3002')
     const dataApi = await response.json()
+    setLoading(false)
     setData(dataApi)
+    }
+    catch(error){
+      setLoading(false)
+      console.log(error.message)
+      setData(mockApi)
+    }
   }
 
   useEffect(() => {
@@ -30,7 +41,7 @@ export default function Home() {
       Find out the latest news about Technology
     </Styles.Text>
     <Styles.NewsContainer>
-      {
+      {loading ? 'Loading...' :
         data.map((news) => (
           <Styles.NewsContent href={news.link}>
             <Styles.NewsImg src={news.imgUrl}/>
