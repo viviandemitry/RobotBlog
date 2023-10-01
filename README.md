@@ -2,6 +2,8 @@
 
 https://robot-blog.vercel.app/
 
+<p><img src="Robot_blog_Initial_page.PNG"></p>
+
 Design
 + Figma
 
