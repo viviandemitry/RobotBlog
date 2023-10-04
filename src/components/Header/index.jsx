@@ -14,7 +14,7 @@ export default function Header() {
   
   const location = useLocation();
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   function handleClick(){
     dispatch(GetEmail(''))

@@ -47,6 +47,9 @@ export const Title = styled.h1`
 export const Text = styled.p`
     margin-top: ${px2vw(-30)};
     margin-left: ${px2vw(92)};  
+    background-color: #000D3F;
+    width:${px2vw(374)};
+    
 
     color: #FFF;
     font-family: Jost;
@@ -59,7 +62,9 @@ export const Text = styled.p`
     @media ${device.mobileM}{
         display: flex;
         justify-content: center;
-        margin-left: 0;
+        margin: auto;
+        margin-bottom: ${px2vw(35)};
+        width: ${px2vw(600)};
 
         font-size: ${px2vw(30)};
     }

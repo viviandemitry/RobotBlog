@@ -12,7 +12,7 @@ export default function Home() {
   async function getInfo(){
     try{
     setLoading(true)
-    const response = await fetch('http://localhost:3002')
+    const response = await fetch(' https://web-scraping-docker.onrender.com/')
     const dataApi = await response.json()
     setLoading(false)
     setData(dataApi)

@@ -28,7 +28,7 @@ export default function Initial() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. A rhoncus nisi, diam elementum amet felis nibh. Pulvinar elementum ornare pharetra leo tellus id. Elementum tempus, cursus ac imperdiet tellus ornare duis vel. Lacus, lacus volutpat vulputate egestas in.
           </Styles.TextP>
           <Styles.ButtonInitial onClick={goLogin}>
-            Acesse Agora
+            Access now
           </Styles.ButtonInitial>
         </Styles.ContainerTexts>
         <Styles.ContainerImg>
