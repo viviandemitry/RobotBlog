@@ -34,7 +34,7 @@ console.log(props)
         email,
         password
     }
-    const response = await fetch('http://localhost:3000/api/cadastrar', {method: 'POST', headers: {'Content-Type': 'application/json',},
+    const response = await fetch('https://api-express-mongodb.onrender.com/api/cadastrar', {method: 'POST', headers: {'Content-Type': 'application/json',},
     body: JSON.stringify(data),})
     console.log(response)
     props.setIsRegister(false)
