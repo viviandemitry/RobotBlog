@@ -41,9 +41,16 @@ export default function Home() {
       Find out the latest news about Technology
     </Styles.Text>
     <Styles.NewsContainer>
-      {loading ? 'Loading...' :
+      {loading ? mockApi.map((news) => (
+          <Styles.NewsContent href={news.link} key={news.link}>
+            <Styles.NewsImg src={news.imgUrl}/>
+            <Styles.NewsTitle>
+              {news.title}
+            </Styles.NewsTitle>
+          </Styles.NewsContent>   
+        )) :
         data.map((news) => (
-          <Styles.NewsContent href={news.link}>
+          <Styles.NewsContent href={news.link} key={news.link}>
             <Styles.NewsImg src={news.imgUrl}/>
             <Styles.NewsTitle>
               {news.title}
