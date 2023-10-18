@@ -150,6 +150,10 @@ export const RegisterButton = styled.button`
     line-height: normal;
     letter-spacing: ${px2vw(0.36)};
 
+    &:hover{
+        cursor:pointer;
+    }
+
     @media ${device.mobileM}{
         font-size: ${px2vw(40)};
         margin-top: ${px2vw(100)};
@@ -180,6 +184,10 @@ export const SubmitButton = styled.button`
     line-height: normal;
     letter-spacing: ${px2vw(0.4)};
 
+    &:hover{
+        cursor:pointer;
+    }
+    
     @media ${device.mobileM}{
         font-size: ${px2vw(40)};
         margin-top: ${px2vw(120)};

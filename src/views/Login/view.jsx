@@ -36,7 +36,7 @@ async function handleClick(e){
     password
 }
   const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  if (!(email.match(regexEmail)) || !(password.length >= 8)){
+  if (!(email.match(regexEmail)) || !(password.length >= 6)){
      setMessage('Invalid E-mail or Password') 
     } else {
       const response = await fetch('https://api-express-mongodb.onrender.com/api/login', {method: 'POST', headers: {'Content-Type': 'application/json',},

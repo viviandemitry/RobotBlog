@@ -4,7 +4,7 @@ import { device } from "../../utils/brakePoints";
 
 export const Container = styled.div`
     display: flex;
-    width: 100%;
+    width: 100vw;
     background: #000D3F;
 
     @media ${device.mobileM}{
@@ -39,7 +39,7 @@ export const ConfigEmailButton = styled.div`
     flex-direction: row;
     column-gap: ${px2vw(72)};
     margin-top: ${px2vw(10)};
-    margin-left: ${px2vw(900)};
+    margin-left: ${px2vw(750)};
     justify-content: center;
     align-items: center;
 
@@ -90,6 +90,10 @@ export const ButtonLogout = styled.button`
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    &:hover{
+        cursor:pointer;
+    }
 
     @media ${device.mobileM}{
         /* margin-left: ${px2vw(500)}; */
