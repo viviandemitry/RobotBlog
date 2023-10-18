@@ -116,6 +116,10 @@ export const ButtonInitial = styled.button`
     line-height: normal;
     letter-spacing: ${px2vw(0.36)};
 
+    &:hover{
+        cursor:pointer;
+    }
+
     @media ${device.mobileM}{
         margin-top: ${px2vw(50)};
         margin-left: ${px2vw(300)};
@@ -128,17 +132,12 @@ export const ButtonInitial = styled.button`
 `
 
 export const ContainerImg = styled.div`
-        /* display: flex; */
-        /* align-items:bottom; */
-        /* margin-top: 14.44rem; */
         margin-top: ${px2vw(45)};
         margin-left: ${px2vw(10)};
-        /* border: solid red; */
      
      img{
         width: ${px2vw(500)};
         height: ${px2vw(545)};
-        /* flex-shrink: 0;  */
     }
 
     @media ${device.mobileM}{
