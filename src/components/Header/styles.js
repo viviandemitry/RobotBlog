@@ -96,7 +96,6 @@ export const ButtonLogout = styled.button`
     }
 
     @media ${device.mobileM}{
-        /* margin-left: ${px2vw(500)}; */
         width: ${px2vw(200)};
         height: ${px2vw(40)}; 
         font-size: ${px2vw(40)};
